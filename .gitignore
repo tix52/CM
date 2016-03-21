@@ -1,0 +1,7 @@
+*.pdb
+*.dll
+*.cache
+\packages\**
+packages
+[Bb]in
+obj
