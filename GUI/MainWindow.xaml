@@ -7,6 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Ribbon x:Name="RibbonWin" SelectedIndex="0">
+            <!--<RibbonGroup Header="Client">
+                
+            </RibbonGroup>
+            <RibbonGroup Header="Casier">
+                
+            </RibbonGroup>
+            <RibbonGroup Header="Affectation">
+                
+            </RibbonGroup>-->
+
+            <RibbonTab Header="Insert">
+
+            </RibbonTab>
+        </Ribbon>
+        <DockPanel Name="UIPanel" Grid.Row="1">
+            <!--<DataGrid ItemsSource="{Binding Casiers, Mode=TwoWay}"></DataGrid>-->
+
+        </DockPanel>
     </Grid>
 </RibbonWindow>
