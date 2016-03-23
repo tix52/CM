@@ -64,6 +64,7 @@
     <Compile Include="Client\CommandHandler.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="RibbonFactory.cs" />
+    <Compile Include="ViewsManager.cs" />
     <Page Include="Client\ClientsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

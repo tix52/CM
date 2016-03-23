@@ -32,7 +32,7 @@ namespace GUI.Client
         {
             _clients = new ObservableCollection<CasierModel.Client>();
 
-            for (int i = 0; i < 5456; i++)
+            for (int i = 0; i < 10; i++)
             {
                 var tmp = new CasierModel.Client();
                 tmp.IdClient = i;

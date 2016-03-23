@@ -26,7 +26,7 @@ namespace GUI
             InitializeComponent();
             DataContext = new MainWindowViewModel();
         //     this.Loaded += MainWindow_Loaded;
-            UIPanel.Children.Add(new Client.ClientsView());
+          //  UIPanel.Children.Add(new Client.ClientsView());
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)

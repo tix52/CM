@@ -25,7 +25,7 @@ namespace GUI
 
         private void ClientHandler()
         {
-            
+            ViewsManager.Instance.CreateAndOpenClientView();
         }
 
         private void AffectationHandler()

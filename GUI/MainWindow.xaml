@@ -14,9 +14,9 @@
         <Ribbon x:Name="RibbonWin" SelectedIndex="0">
             <RibbonTab Header="Administration">
                 <RibbonGroup >
-                    <RibbonButton Label="Clients" LargeImageSource="pack://application:,,,/Resources/personal.png"/>
-                    <RibbonButton Label="Casiers" LargeImageSource="pack://application:,,,/Resources/personal.png"/>
-                    <RibbonButton Label="Affectations" LargeImageSource="pack://application:,,,/Resources/personal.png"/>
+                    <RibbonButton Label="Clients" LargeImageSource="pack://application:,,,/Resources/personal.png" Command="{Binding ClientCommand}"/>
+                    <RibbonButton Label="Casiers" LargeImageSource="pack://application:,,,/Resources/personal.png" Command="{Binding CasierCommand}"/>
+                    <RibbonButton Label="Affectations" LargeImageSource="pack://application:,,,/Resources/personal.png" Command="{Binding AffectationsCommand}"/>
                 </RibbonGroup>
 
             </RibbonTab>
