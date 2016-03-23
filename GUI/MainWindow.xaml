@@ -12,23 +12,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Ribbon x:Name="RibbonWin" SelectedIndex="0">
-            <!--<RibbonGroup Header="Client">
-                
-            </RibbonGroup>
-            <RibbonGroup Header="Casier">
-                
-            </RibbonGroup>
-            <RibbonGroup Header="Affectation">
-                
-            </RibbonGroup>-->
-
-            <RibbonTab Header="Insert">
+            <RibbonTab Header="Administration">
+                <RibbonGroup >
+                    <RibbonButton Label="Clients" LargeImageSource="pack://application:,,,/Resources/personal.png"/>
+                    <RibbonButton Label="Casiers" LargeImageSource="pack://application:,,,/Resources/personal.png"/>
+                    <RibbonButton Label="Affectations" LargeImageSource="pack://application:,,,/Resources/personal.png"/>
+                </RibbonGroup>
 
             </RibbonTab>
         </Ribbon>
         <DockPanel Name="UIPanel" Grid.Row="1">
-            <!--<DataGrid ItemsSource="{Binding Casiers, Mode=TwoWay}"></DataGrid>-->
-
         </DockPanel>
     </Grid>
 </RibbonWindow>

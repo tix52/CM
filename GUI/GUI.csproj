@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Controls.Ribbon" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,13 +57,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ClientsViewModel.cs" />
-    <Compile Include="ClientsView.xaml.cs">
+    <Compile Include="Client\ClientsViewModel.cs" />
+    <Compile Include="Client\ClientsView.xaml.cs">
       <DependentUpon>ClientsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Client\CommandHandler.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="RibbonFactory.cs" />
-    <Page Include="ClientsView.xaml">
+    <Page Include="Client\ClientsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -94,7 +96,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -111,6 +113,13 @@
       <Project>{53ac2b5f-6e27-442b-92b2-f4c55382ad48}</Project>
       <Name>CasierModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Affectations\" />
+    <Folder Include="Casier\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\personal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
