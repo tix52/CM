@@ -1,7 +1,9 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using CasierModel;
 
 namespace GUI.Client
 {
@@ -11,6 +13,8 @@ namespace GUI.Client
         public event PropertyChangedEventHandler PropertyChanged;
         private ICommand _saveCommand;
         private ICommand _deleteCommand;
+        private CasierModel.Client _selectedItem;
+        private HashSet<CasierModel.Client> _addedItems;
 
         private void OnPropertyChanged([CallerMemberName] string name = null)
         {
@@ -43,7 +47,7 @@ namespace GUI.Client
 
             _saveCommand = new CommandHandler(SaveHandler, null);
             _deleteCommand = new CommandHandler(DeleteHandler, null);
-
+            _addedItems = new HashSet<CasierModel.Client>();
         }
 
         public ObservableCollection<CasierModel.Client> Clients
@@ -83,6 +87,21 @@ namespace GUI.Client
             set
             {
                 _deleteCommand = value;
+            }
+        }
+
+        public CasierModel.Client SelectedItem
+        {
+            get
+            {
+                return _selectedItem;
+            }
+
+            set
+            {
+                _selectedItem = value;
+                if (_selectedItem != null && !_clients.Contains(_selectedItem)) _addedItems.Add(value);
+                OnPropertyChanged();
             }
         }
     }
