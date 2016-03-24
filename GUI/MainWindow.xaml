@@ -20,8 +20,12 @@
                 </RibbonGroup>
 
             </RibbonTab>
+            <TabControl>
+                <TabItem Header="wazazaaa"></TabItem>
+            </TabControl>
         </Ribbon>
-        <DockPanel Name="UIPanel" Grid.Row="1">
+        <DockPanel Name="UIPanel" Grid.Row="1" AllowDrop="True" Dock="Left">
+            
         </DockPanel>
     </Grid>
 </RibbonWindow>
